@@ -1,7 +1,8 @@
 # legal-skills
 
-> 面向法律实务的 AI Agent Skills 集合（中文优先）。
-> 覆盖法律文书起草、债务计算、案件材料命名归档、履约判决跟踪、引注核验、账户解冻核对，以及中文公文 / 诉讼文书的 Word 排版规范。
+> 面向法律实务的 AI Agent Skills 集合（中文优先）：法律文书起草、判决债务计算、案件材料命名归档、履约判决跟踪台账、法律引注核验与就地修订、公文 / 诉讼文书 Word 排版规范、账户解冻核对。
+>
+> AI agent skills for legal practice (Chinese-first): legal document drafting, judgment debt computation, case-file naming & filing, judgment-performance ledgers, legal citation checking with in-place redlining, Chinese official-document Word formatting, and frozen-account reconciliation.
 
 ## 包含的 skills
 
