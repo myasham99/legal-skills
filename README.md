@@ -1,7 +1,7 @@
 # legal-skills
 
 > 面向法律实务的 AI Agent Skills 集合（中文优先）。
-> 覆盖法律文书起草、债务计算、案件材料命名归档、履约判决跟踪、引注核验、账户解冻核对等场景。
+> 覆盖法律文书起草、债务计算、案件材料命名归档、履约判决跟踪、引注核验、账户解冻核对，以及中文公文 / 诉讼文书的 Word 排版规范。
 
 ## 包含的 skills
 
@@ -14,6 +14,7 @@
 | [`legal-citation-redline`](skills/legal-citation-redline/) | 法律引注核验，并**在原有 Word 文件上加批注完成就地修订**（改编自上游开源项目，见 NOTICE） | — |
 | [`ccp-legal-meeting`](skills/ccp-legal-meeting/) | 批量生成同版式 Word / PPT 的技术骨架，含照片按屏幕内容归档流程与排版踩坑清单 | `python-docx`、`python-pptx` |
 | [`unfreeze-account-assets`](skills/unfreeze-account-assets/) | 账户解冻情况核对与台账 P/Q 列校准（以财务实时台账为基准） | `openpyxl` |
+| [`docx-official-document`](skills/docx-official-document/) | 中文公文 / 诉讼文书 Word 排版规范（页面、四级标题字体层级、行距缩进、页脚页码、导航标题）+ 可运行 python-docx 示例 | `python-docx` |
 
 ## 安装
 
@@ -55,3 +56,7 @@
 ## 许可
 
 [MIT](LICENSE)
+
+## 相关仓库
+
+`skills/docx-official-document` 亦维护为独立仓库 [docx-official-document](https://github.com/myasham99/docx-official-document)，便于单独引用；本仓库中的为其同步副本。
