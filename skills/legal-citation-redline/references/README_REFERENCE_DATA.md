@@ -14,10 +14,10 @@ For full coverage, place legally obtained local files here:
 
 ```text
 assets/Law_Journal_Citation_Handbook_2019.pdf
-references/handbook_raw.md
-references/citation_handbook_structured.md
-references/handbook_rule_index.json
-references/handbook_rule_index.md
+本地生成的 handbook_raw.md
+本地生成的 citation_handbook_structured.md
+本地生成的 handbook_rule_index.json
+本地生成的 handbook_rule_index.md
 references/citation_rules.json
 ```
 
@@ -47,10 +47,10 @@ python3 scripts/build_reference_data.py --print-ai-contract
 Manual conversion workflow:
 
 1. Confirm the handbook PDF is searchable. If it is image-only, OCR it into a searchable PDF first.
-2. Extract the searchable PDF into `references/handbook_raw.md`.
-3. Extract Rules 1-100 into `references/handbook_rule_index.json`.
-4. Create a readable copy at `references/handbook_rule_index.md`.
-5. Create `references/citation_rules.json` for fast diagnosis and formatting.
+2. Extract the searchable PDF into `本地生成的 handbook_raw.md`.
+3. Extract Rules 1-100 into `本地生成的 handbook_rule_index.json`.
+4. Create a readable copy at `本地生成的 handbook_rule_index.md`.
+5. Create 本地生成的 `citation_rules.json` for fast diagnosis and formatting.
 6. Mark unclear OCR passages as `[待核: OCR]` instead of guessing.
 
 `handbook_rule_index.json` should use this shape:

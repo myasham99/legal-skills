@@ -23,10 +23,10 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 DEFAULT_ROOT = SCRIPT_DIR.parent
 
 PDF_REL = Path("assets/Law_Journal_Citation_Handbook_2019.pdf")
-RAW_REL = Path("references/handbook_raw.md")
-STRUCTURED_REL = Path("references/citation_handbook_structured.md")
-RULE_INDEX_JSON_REL = Path("references/handbook_rule_index.json")
-RULE_INDEX_MD_REL = Path("references/handbook_rule_index.md")
+RAW_REL = Path("本地生成的 handbook_raw.md")
+STRUCTURED_REL = Path("本地生成的 citation_handbook_structured.md")
+RULE_INDEX_JSON_REL = Path("本地生成的 handbook_rule_index.json")
+RULE_INDEX_MD_REL = Path("本地生成的 handbook_rule_index.md")
 CITATION_RULES_REL = Path("references/citation_rules.json")
 
 CATEGORY_RANGES: list[tuple[str, range]] = [
@@ -389,7 +389,7 @@ def render_rule_index_md(index: dict[str, Any]) -> str:
     lines = [
         "# Handbook Rule Index",
         "",
-        "Source: `references/handbook_raw.md`",
+        "Source: `本地生成的 handbook_raw.md`",
         f"Rules extracted: {index['count']}",
         f"Missing rule numbers: {index['missing_rule_numbers']}",
         "",
@@ -673,7 +673,7 @@ def main() -> int:
     parser.add_argument("--root", type=Path, default=DEFAULT_ROOT, help="Skill root or repository root")
     parser.add_argument("--pdf", type=Path, help="Path to the legally obtained handbook PDF")
     parser.add_argument("--force", action="store_true", help="Overwrite existing generated reference files")
-    parser.add_argument("--use-existing-raw", action="store_true", help="Build from references/handbook_raw.md")
+    parser.add_argument("--use-existing-raw", action="store_true", help="Build from 本地生成的 handbook_raw.md")
     parser.add_argument("--extract-only", action="store_true", help="Only extract PDF text to handbook_raw.md")
     parser.add_argument("--skip-audit", action="store_true", help="Do not run audit_reference_data.py")
     parser.add_argument("--skip-self-test", action="store_true", help="Do not run self_test.py")

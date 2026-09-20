@@ -13,7 +13,7 @@ This file is for agents that are not careful enough by default. Follow it litera
    - Do not force a messy citation into a random template.
 
 3. Always cite handbook support.
-   - Use `scripts/handbook_lookup.py` or search `references/handbook_rule_index.md`.
+   - Use `scripts/handbook_lookup.py` or search `本地生成的 handbook_rule_index.md`.
    - Give rule numbers such as `第25条、第48条`.
 
 4. Always explain where missing facts come from.

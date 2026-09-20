@@ -10,13 +10,25 @@ description: 全面法学引注诊断、补全与格式化工具（本地手册�
 > 原项目与本项目均采用 MIT 许可；第三方版权资料（如《法学引注手册》PDF）不随本仓库分发。
 
 
+
+## 参考资料自备说明（重要）
+
+本仓库**不包含**《法学引注手册》等第三方版权资料，也不包含由其生成的 OCR 全文或完整规则索引（遵循上游项目同一原则）。
+
+如需完整的规则数据层，请：
+1. 合法取得该手册（纸质或正版电子版）；
+2. 放入 `assets/` 目录（文件名见 `references/README_REFERENCE_DATA.md`）；
+3. 运行 `python scripts/build_reference_data.py` 在**本地**生成 `handbook_raw.md`、`handbook_rule_index.*`、`citation_rules.json`。
+
+未生成上述文件时，本 skill 仅依赖 `references/` 中随仓库分发的方法说明文件工作。
+
 ## Role
 
 This skill is the citation brain. It diagnoses and generates citation text. It does not edit Word files directly; use `legal-citation-automator` for DOCX insertion.
 
 Primary rule: never invent missing bibliographic facts. If a required element is absent and cannot be extracted from a provided source, mark it as `[待补: 要素名]` and tell the user where to find it.
 
-Completeness rule: the simplified templates are not the whole handbook. Before giving a final answer for any non-trivial citation, consult a legally obtained copy of the citation handbook or a user-provided rule index. This public repository does not redistribute third-party handbook PDFs or OCR dumps. Use `references/citation_rules.json` only as a fast execution layer when the user or local installation provides it.
+Completeness rule: the simplified templates are not the whole handbook. Before giving a final answer for any non-trivial citation, consult a legally obtained copy of the citation handbook or a user-provided rule index. This public repository does not redistribute third-party handbook PDFs or OCR dumps. Use 本地生成的 `citation_rules.json` only as a fast execution layer when the user or local installation provides it.
 
 Weak-agent guardrail: if you are unsure, do not improvise. Follow `references/operator_guardrails.md` exactly. A citation answer is not complete unless it states the source type, missing elements, lookup path, suggested format, and relevant handbook rule numbers.
 
@@ -35,7 +47,7 @@ Weak-agent guardrail: if you are unsure, do not improvise. Follow `references/op
 
 1. Classify the citation type.
    - Search the user-provided handbook/rule index for the source category and rule numbers.
-   - Use `references/citation_rules.json` for required elements, templates, and handbook anchors when that optional local reference file is available.
+   - Use 本地生成的 `citation_rules.json` for required elements, templates, and handbook anchors when that optional local reference file is available.
    - If the repository lacks full reference data, stop at diagnosis/placeholders and tell the user what source material is needed.
 2. Extract existing elements from the messy footnote or supplied source.
 3. Diagnose missing required and optional elements.
@@ -150,14 +162,14 @@ For any source type not explicitly represented in `citation_rules.json`, search 
 ## Reference Navigation
 
 - `references/README_REFERENCE_DATA.md`: explains which optional reference files are intentionally not redistributed.
-- `references/handbook_rule_index.json`: optional local full machine-readable index of rules 1-100. Load/search this for exhaustive coverage if the user provides it.
-- `references/handbook_rule_index.md`: optional readable version of the full index with raw line ranges.
-- `references/citation_rules.json`: optional machine-readable rule source. Load this first if present.
+- `本地生成的 handbook_rule_index.json`: optional local full machine-readable index of rules 1-100. Load/search this for exhaustive coverage if the user provides it.
+- `本地生成的 handbook_rule_index.md`: optional readable version of the full index with raw line ranges.
+- 本地生成的 `citation_rules.json`: optional machine-readable rule source. Load this first if present.
 - `references/missing_elements_matrix.md`: quick checklist for missing elements by type.
 - `references/source_lookup_guide.md`: where to find missing bibliographic facts.
 - `references/operator_guardrails.md`: strict operating rules for other AI agents.
 - `references/common_errors.md`: common mistakes and course-specific footnote traps.
-- `references/citation_handbook_structured.md`: structured digest of the handbook.
+- `本地生成的 citation_handbook_structured.md`: structured digest of the handbook.
 - `assets/Law_Journal_Citation_Handbook_2019.pdf`: 本地手册原件（《法学引注手册》2019年11月版，规则1—100），必要时用于最终核对。
 
 ## Reference Data Build

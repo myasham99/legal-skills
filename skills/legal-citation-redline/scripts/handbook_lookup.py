@@ -15,7 +15,7 @@ INDEX_PATH = SCRIPT_DIR.parent / "references" / "handbook_rule_index.json"
 def load_index() -> list[dict]:
     if not INDEX_PATH.exists():
         raise SystemExit(
-            "Missing optional reference file: references/handbook_rule_index.json\n"
+            "Missing optional reference file: 本地生成的 handbook_rule_index.json\n"
             "This public package does not redistribute third-party handbook OCR/index "
             "data. Add a locally licensed rule index before using handbook lookup."
         )

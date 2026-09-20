@@ -22,10 +22,10 @@ DEFAULT_ROOT = SCRIPT_DIR.parent
 
 REQUIRED_FILES = {
     "pdf": Path("assets/Law_Journal_Citation_Handbook_2019.pdf"),
-    "raw": Path("references/handbook_raw.md"),
-    "structured": Path("references/citation_handbook_structured.md"),
-    "rule_index_json": Path("references/handbook_rule_index.json"),
-    "rule_index_md": Path("references/handbook_rule_index.md"),
+    "raw": Path("本地生成的 handbook_raw.md"),
+    "structured": Path("本地生成的 citation_handbook_structured.md"),
+    "rule_index_json": Path("本地生成的 handbook_rule_index.json"),
+    "rule_index_md": Path("本地生成的 handbook_rule_index.md"),
     "citation_rules": Path("references/citation_rules.json"),
 }
 
