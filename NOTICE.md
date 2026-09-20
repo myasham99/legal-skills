@@ -34,3 +34,9 @@
 
 - 本项目提供的是通用方法论与工作流骨架，**不构成法律意见**；使用者应自行核验所生成文件的准确性与合规性。
 - 涉及具体案件、台账与主体的业务数据，请在本单位合规框架内处理，勿将内部数据提交至公开仓库。
+
+## 四、许可声明
+
+- 本仓库原创部分：MIT License, Copyright (c) 2026 myasham99（见 [LICENSE](LICENSE)）。
+- `skills/legal-citation-redline`：改编自 NEU-ZHA/legal-ai-skills（MIT, Copyright (c) 2026 Legal AI Skills contributors），保留其版权声明。
+- 各第三方 Python / Node 依赖按各自许可分发，未捆绑二进制。
