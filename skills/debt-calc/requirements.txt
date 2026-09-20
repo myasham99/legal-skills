@@ -1,0 +1,5 @@
+# debt_calc.py 依赖清单
+openpyxl>=3.1.0
+
+# 可选：备用 OCR（缺失时脚本自动降级为同名 txt）
+PyMuPDF>=1.23.0

@@ -1,0 +1,5 @@
+# naming_n_filing.py 依赖清单
+pypdf>=3.0.0
+PyMuPDF>=1.23.0
+Pillow>=10.0.0
+imagehash>=4.3.1

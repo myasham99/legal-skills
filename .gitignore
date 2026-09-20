@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# 业务数据（不入库：台账 / 文书 / 参考资料）
+*.xlsx
+*.xls
+*.docx
+*.doc
+*.pdf
+~$*.docx
+~$*.xlsx
+
+# 本地配置与备份
+_config.json
+_raw_backup/
+*.bak
+*.bak_*
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+_user_meta.json
